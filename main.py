@@ -40,8 +40,8 @@ while True:
         cv2.putText(roi,str(id)+": "+str(speed)+"Km/h",(x,y-15),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),1)
         cv2.rectangle(roi,(x,y),(x+w,y+h),(0,0,255),3)
 
-   # cv2.imshow("mask",mask)
-   # cv2.imshow("roi",roi)
+    cv2.imshow("mask",mask)
+    cv2.imshow("roi",roi)
     cv2.imshow("img",img)
 
     key=cv2.waitKey(30)
