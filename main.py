@@ -1,6 +1,7 @@
 from FunctionLibrary import *
 import cv2
 import time
+import os
 
 tracker=EuclideanDistTracker()
 PTime=0
@@ -10,11 +11,10 @@ WebcamIsUsing=False
 if WebcamIsUsing: 
     cap=cv2.VideoCapture(0)
 else:
-    cap=cv2.VideoCapture("highway.mp4")
+    cap=cv2.VideoCapture(r'C:\Users\KIIT\Desktop\speed detection project\SpeedDetection\highway.mp4')
 
 while True:
-    _,img=cap.read()
-
+    _,img=cap.read() 
     h,w,_,=img.shape
     roi=img[340: 720,500: 800]
     mask=obj_det.apply(roi)
